@@ -54,7 +54,7 @@ Even though CSRF protection is important, we can disable it while testing to foc
 ✅ Creating custom logout behaviour
 
 #### Reflection:
-Today i learned the flow of how the request is send and comeback as response and each states it passes through and compare it with real world request mapping to understand it deeply.
+Today i learned the flow of how the request is send and comeback as response and each stage it passes through. Compare it with real world request mapping to understand it deeply.
 I also learnt how the custom logout pages are build and what are the process that is happening behind once we logged out.
 
 
