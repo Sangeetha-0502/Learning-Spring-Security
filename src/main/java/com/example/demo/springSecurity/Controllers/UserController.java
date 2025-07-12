@@ -11,5 +11,10 @@ public class UserController {
 	public String greetings() {
 		return "Hello world";
 	}
+	
+	@GetMapping("/custom-logout")
+	public String logout() {
+		return "you have been logged out";
+	}
 
 }

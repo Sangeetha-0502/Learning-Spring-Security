@@ -22,15 +22,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable()) // optional for now
+            .csrf(csrf -> csrf.disable()) 
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().authenticated() // protect all endpoints
+                .anyRequest().authenticated() 
             )
             .formLogin(withDefaults()) 
-            .httpBasic(withDefaults())// use default login form
+            .httpBasic(withDefaults())
             .logout(logout -> logout
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout")
+                .logoutSuccessUrl("/custom-logout")
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
             );
@@ -41,8 +41,8 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
         UserDetails user = User.withUsername("Sangee")
-            .password(encoder.encode("s@1234")) // encoded password
-            .roles("ADMIN") // give any role
+            .password(encoder.encode("s@1234")) 
+            .roles("ADMIN") 
             .build();
 
         return new InMemoryUserDetailsManager(user);
