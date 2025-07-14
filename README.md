@@ -57,6 +57,17 @@ Even though CSRF protection is important, we can disable it while testing to foc
 Today i learned the flow of how the request is send and comeback as response and each stage it passes through. Compare it with real world request mapping to understand it deeply.
 I also learnt how the custom logout pages are build and what are the process that is happening behind once we logged out.
 
+### 🛡️ Learning Spring Security – Day 3 (11/07/2025)
+#### Topics Covered:
+
+- ✅ Replace In-Memory with Database authentication
+- ✅ What is `UserDetails` and how to create a custom implementation
+- ✅ What is `UserDetailsService` and how to fetch users from DB
+- ✅ Using `AuthenticationProvider` and `DaoAuthenticationProvider`
+- ✅ Connecting Spring Security with MySQL via Spring Data JPA
+#### Reflection 
+Today i learnt how to fetch the data from database using UserDetailsService by implementing our own UserDetailsServicee interface to let the spring use  our customized UserDetailsService rather than the default one and learnt the concept of AuthenticationProvider
+Tested custom login via postman to deeply understand how the authentication provider works.
 
 
 
